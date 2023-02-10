@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wizard Game</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<style>
+			body {
+				background: black url("/img/rays-of-sun-through-trees.jpg") no-repeat fixed center center;
+				background-size: cover;
+			}
+			.container {
+				color: white;
+				background: black;
+				background: var(--bs-dark);
+				opacity: 0.85;
+				border-radius: 1rem;
+			}
+			.form-help {
+				font-size: 85%;
+			}
+			#next_pages button { font-size: 0.85rem }
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container my-3">
+				<h1 class="text-center p-3">Wizard Game</h1>
+			</div>
+		</header>
+		<main>
+			<div class="container my-3">
+				<div class="row gx-lg-5">
+					<div id="html" class="col-12">
+						<div class="px-3 py-5">
+							<h2>Character Details</h2>
+							<form action="" class="row">
+								<div class="mb-3 col-12 col-md-6">
+									<label for="pref_name" class="form-label">Character Full Name</label>
+									<input type="text" class="form-control" id="pref_name">
+									<p class="form-help">Typically a first name plus last name.</p>
+								</div>
+								<div class="mb-3 col-12 col-md-6">
+									<label for="pref_nick" class="form-label">Character Short Name</label>
+									<input type="text" class="form-control" id="pref_nick">
+									<p class="form-help">What your character will normally be called in conversation.</p>
+								</div>
+								<div class="mb-3 col-12 col-md-6">
+									<label class="form-label">Character pronouns</label>
+									<!-- Alphabetical -->
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_pronoun" value="hehim" id="pref_pronoun_hehim">
+										<label class="form-check-label" for="pref_pronoun_hehim">He/him</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_pronoun" value="sheher" id="pref_pronoun_sheher">
+										<label class="form-check-label" for="pref_pronoun_sheher">She/her</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_pronoun" value="theythem" id="pref_pronoun_theythem">
+										<label class="form-check-label" for="pref_pronoun_theythem">They/them</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_pronoun" value="custom" id="pref_pronoun_custom">
+										<label class="form-check-label" for="pref_pronoun_custom">Custom</label>
+									</div>
+								</div>
+								<div class="mb-3 col-12 col-md-6">
+									<div class="custom_pronoun_fields">
+										<div class="mb-2">
+											<label for="pref_pronoun_custom_nominative" class="form-label">Nominative pronoun</label>
+											<input type="text" class="form-control" id="pref_pronoun_custom_nominative">
+											<p class="form-help">Pronoun to use in sentences like "___ picked up the cauldron."<br>Common examples: <i>he</i> and <i>she</i>.</p>
+										</div>
+										<div class="mb-2">
+											<label for="pref_pronoun_custom_accusative" class="form-label">Accusative pronoun</label>
+											<input type="text" class="form-control" id="pref_pronoun_custom_accusative">
+											<p class="form-help">Pronoun to use in sentences like "The owl pecked ___."<br>Common examples: <i>him</i> and <i>her</i>.</p>
+										</div>
+										<div class="mb-2">
+											<label for="pref_pronoun_custom_possessive" class="form-label">Possessive pronoun</label>
+											<input type="text" class="form-control" id="pref_pronoun_custom_possessive">
+											<p class="form-help">Pronoun to use in sentences like "That owl is ___."<br>Common examples: <i>his</i> and <i>hers</i>.</p>
+										</div>
+										<div class="mb-2">
+											<label for="pref_pronoun_custom_possessive_determiner" class="form-label">Possessive determiner</label>
+											<input type="text" class="form-control" id="pref_pronoun_custom_possessive_determiner">
+											<p class="form-help">Pronoun to use in sentences like "That is ___ owl."<br>Common examples: <i>his</i> and <i>her</i>.</p>
+										</div>
+										<div class="mb-2">
+											<label for="pref_pronoun_custom_reflexive" class="form-label">Reflexive pronoun</label>
+											<input type="text" class="form-control" id="pref_pronoun_custom_reflexive">
+											<p class="form-help">Pronoun to use in sentences like "(Name) saw ___ in the mirror."<br>Common examples: <i>himself</i> and <i>herself</i>.</p>
+										</div>
+									</div>
+								</div>
+								<div class="mb-3 col-12 col-md-6">
+									<label class="form-label">Character title</label>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_title" value="mage" id="pref_title_mage">
+										<label class="form-check-label" for="pref_title_mage">Mage</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_title" value="sorcerer" id="pref_title_sorcerer">
+										<label class="form-check-label" for="pref_title_sorcerer">Sorcerer</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_title" value="sorceress" id="pref_title_sorceress">
+										<label class="form-check-label" for="pref_title_sorceress">Sorceress</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_title" value="warlock" id="pref_title_warlock">
+										<label class="form-check-label" for="pref_title_warlock">Warlock</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_title" value="witch" id="pref_title_witch">
+										<label class="form-check-label" for="pref_title_witch">Witch</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_title" value="wizard" id="pref_title_wizard">
+										<label class="form-check-label" for="pref_title_wizard">Wizard</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_title" value="wizardess" id="pref_title_wizardess">
+										<label class="form-check-label" for="pref_title_wizardess">Wizardess</label>
+									</div>
+								</div>
+								<div class="mb-3 col-12 col-md-6">
+									<label class="form-label">Character species</label>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_catfolk" value="catfolk" id="pref_species_catfolk">
+										<label class="form-check-label" for="pref_species_catfolk">Catfolk</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_species" value="dwarf" id="pref_species_dwarf">
+										<label class="form-check-label" for="pref_species_dwarf">Dwarf</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_species" value="elf" id="pref_species_elf">
+										<label class="form-check-label" for="pref_species_elf">Elf</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_species" value="fairy" id="pref_species_fairy">
+										<label class="form-check-label" for="pref_species_fairy">Fairy</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_species" value="giant" id="pref_species_giant">
+										<label class="form-check-label" for="pref_species_giant">Giant</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_species" value="human" id="pref_species_human">
+										<label class="form-check-label" for="pref_species_human">Human</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_species" value="vampire" id="pref_species_vampire">
+										<label class="form-check-label" for="pref_species_vampire">Vampire</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="pref_species" value="werewolf" id="pref_species_werewolf">
+										<label class="form-check-label" for="pref_species_werewolf">Werewolf</label>
+									</div>
+								</div>
+								<div class="mb-3 col-12 mt-4">
+									<button class="btn btn-primary" id="pref_save">Save preferences</button>
+									<a class="d-none btn btn-success" id="pref_start" href="/story">Start the journey</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+		<script>
+			"use strict";
+			( function ($) {
+				
+				Cookies.get_or = function ( key, fallback ) {
+					const value = this.get( key );
+					return( value ? value : fallback );
+				};
+				
+				function cookies_to_form () {
+					$( "#pref_name" ).val( Cookies.get_or( "pref_name", "Alex Warlock" ) );
+					$( "#pref_nick" ).val( Cookies.get_or( "pref_nick", "Alex" ) );
+					
+					const p = Cookies.get_or( "pref_pronoun", "theythem" );
+					$( "#pref_pronoun_" + p ).click();
+					
+					const t = Cookies.get_or( "pref_title", "mage" );
+					$( "#pref_title_" + t ).click();
+					
+					const s = Cookies.get_or( "pref_species", "human" );
+					$( "#pref_species_" + s ).click();
+					
+					$( "#pref_pronoun_custom_nominative" ).val( Cookies.get_or( "pref_pronoun_custom_nominative", "ze" ) );
+					$( "#pref_pronoun_custom_accusative" ).val( Cookies.get_or( "pref_pronoun_custom_accusative", "zir" ) );
+					$( "#pref_pronoun_custom_possessive" ).val( Cookies.get_or( "pref_pronoun_custom_possessive", "zirs" ) );
+					$( "#pref_pronoun_custom_possessive_determiner" ).val( Cookies.get_or( "pref_pronoun_custom_possessive_determiner", "zir" ) );
+					$( "#pref_pronoun_custom_reflexive" ).val( Cookies.get_or( "pref_pronoun_custom_reflexive", "zirself" ) );
+				}
+				
+				$( function () {
+					$( "input[name=pref_pronoun]" ).on( 'change click', function ( e ) {
+						if ( $( "#pref_pronoun_custom" ).is( ":checked" ) ) {
+							$( ".custom_pronoun_fields" ).slideDown();
+						}
+						else {
+							$( ".custom_pronoun_fields" ).slideUp();
+						}
+					} );
+					
+					$( "#pref_save" ).on( 'click', function ( e ) {
+						e.preventDefault();
+						const text_fields = [
+							"pref_name",
+							"pref_nick",
+							"pref_pronoun_custom_nominative",
+							"pref_pronoun_custom_accusative",
+							"pref_pronoun_custom_possessive",
+							"pref_pronoun_custom_possessive_determiner",
+							"pref_pronoun_custom_reflexive",
+						];
+						const radio_fields = [
+							"pref_pronoun",
+							"pref_species",
+							"pref_title",
+						];
+						for ( const f of text_fields ) {
+							Cookies.set( f, $( "#" + f ).val() );
+						}
+						for ( const n of radio_fields ) {
+							const inputs  = $( "input[name=" + n + "]" );
+							const checked = inputs.filter( ":checked" );
+							Cookies.set( n, checked.attr( "value" ) );
+						}
+						
+						$( "#pref_start" ).removeClass( "d-none" );
+					} );
+					
+					cookies_to_form();
+				} );
+			} )( jQuery );
+		</script>
+	</body>
+</html>
