@@ -61,4 +61,4 @@ text qq{
 	about to start @{[ player->meta->{pronoun}{det} ]} training.
 };
 
-next_page 'forest-path' => 'Walk down the forest path';
+next_page 'naimargrove' => 'Walk down the forest path';
