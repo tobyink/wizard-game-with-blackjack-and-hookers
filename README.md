@@ -2,6 +2,11 @@
 
 I'll make my own wizard game!
 
+Note that this game is at a *very* early stage of development. If you try
+to reach an area of the story which has not yet be written, you are
+abruptly abandoned at a blank page, and the browser "back" button
+will not help you get back!
+
 ## Play online
 
 https://wizarg.tobyink.uk/
