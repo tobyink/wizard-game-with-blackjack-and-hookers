@@ -2,6 +2,9 @@
 
 I'll make my own wizard game!
 
+(You can help too though. It's open source under GPLv3, and I'd love pull
+requests.)
+
 Note that this game is at a *very* early stage of development. If you try
 to reach an area of the story which has not yet be written, you are
 abruptly abandoned at a blank page, and the browser "back" button
