@@ -2,7 +2,13 @@
 
 I'll make my own wizard game!
 
-## Installation
+## Play online
+
+https://wizarg.tobyink.uk/
+
+## Running locally
+
+### Installation
 
 You need:
 
@@ -15,7 +21,7 @@ Now install the story's prerequisites:
 cpanm --installdeps .
 ```
 
-## Running
+### Execution
 
 Set the `MOJO_HOME` environment variable to the full path to the directory
 containing this README file.
